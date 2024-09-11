@@ -1,0 +1,164 @@
+﻿@model DRP3_Project.Models.VacationDepartmentOverview.VacationOverviewData
+@{
+    ViewData["Title"] = "Vacation request overview";
+}
+
+<head>
+    <script src="~/lib/fullcalendar/main.js"></script>
+    <link rel="stylesheet" href="~/lib/fullcalendar/main.css" />
+    
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <p class="display-4"> Vacation request overview </p>
+        <hr />
+    </div>
+
+    @*Week Overview*@
+    <div class="float-left" style="width: 20%;">
+
+        @*<div class="dropdown" style="float: left; padding: 10px 0px;">
+                <button class="btn btn-secondary dropdown-toggle" type="button" style="background-color: #008A46;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Department
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu0">
+                    <a class="dropdown-item" href="#">Sale</a>
+                    <a class="dropdown-item" href="#">R&D</a>
+                    <a class="dropdown-item" href="#">Economics</a>
+                </div>
+            </div>*@
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Requests</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.VacationReqPerWeek)
+                {
+                    <tr>
+                        <th>@item.WeekNumber</th>
+                        <td>@item.WeeklyRequests</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class=" float-right" style="width: 75%; text-align: left; overflow: hidden;">
+
+        <div style="padding: 10px 0px;">
+            <button class="btn btn-outline-dark text-white" style="background-color: #008A46;" onclick="callenderFunction(); switchVisible();">Calendar view</button>
+        </div>
+
+        <div class="container">
+            <div id='calendar' style="display: none;"></div>
+        </div>
+
+        <div id="week">
+            <table class="table">
+                <thead>
+                    <tr>
+                        @*<th scope="col">#</th>*@
+                        @*<th scope="col">ID</th>*@
+                        <th scope="col">Employee ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">From</th>
+                        <th scope="col">To</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.VacationRequests)
+                    {
+                        if (item.Status == 1)//1==accepted
+                        {
+                            ViewBag.RowColor = "#90EE90"; //TODO better colors
+                        }
+                        else if (item.Status == 2) //2 == denied
+                        {
+                            ViewBag.RowColor = "#FFE6E6";
+                        }
+                        else
+                        {
+                            ViewBag.RowColor = "#FAFAD2";
+                        }
+                        <tr style="background-color:@ViewBag.RowColor;">
+                            @*<th scope="row">1</th>*@
+                            <td>@item.EmployeeId</td>
+                            <td>@item.Firstname @item.Lastname</td>
+                            <td>@item.StartDate.ToString("d")</td>
+                            <td>@item.EndDate.ToString("d")</td>
+                            <td>@((item.EndDate-item.StartDate).TotalDays +1) day(s)</td>
+                            <td>
+                                @if (item.Status == 1)
+                                {
+                                    <button disabled class="btn btn-success">✓</button>
+                                    <i>|</i>
+                                    @Html.ActionLink("X", "ChangeVacationStatus", new { Id = item.Id, NewStatus = 2 }, new { @class = "btn btn-success", @style = "background-color: #CD5C5C;" })
+                                }
+                                else if (item.Status == 2)
+                                {
+                                    @Html.ActionLink("✓", "ChangeVacationStatus", new { Id = item.Id, NewStatus = 1 }, new { @class = "btn btn-success" })
+                                    <i>|</i>
+                                    <button disabled class="btn btn-success" style="background-color: #CD5C5C;">X</button>
+                                }
+                                else
+                                {
+                                    @Html.ActionLink("✓", "ChangeVacationStatus", new { Id = item.Id, NewStatus = 1 }, new { @class = "btn btn-success" }) <i>|</i>
+                                    @Html.ActionLink("X", "ChangeVacationStatus", new { Id = item.Id, NewStatus = 2 }, new { @class = "btn btn-success", @style = "background-color: #CD5C5C;" })
+
+                                }
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+
+        function switchVisible() {
+            if (document.getElementById('week')) {
+
+                if (document.getElementById('week').style.display == 'none') {
+                    document.getElementById('week').style.display = 'block';
+                    document.getElementById('calendar').style.display = 'none';
+                }
+                else {
+                    document.getElementById('week').style.display = 'none';
+                    document.getElementById('calendar').style.display = 'block';
+                }
+            }
+
+        }
+
+        function callenderFunction() {
+           $(document).ready(function () {
+            var calendarEl = document.getElementById('calendar');
+            calendar = new FullCalendar.Calendar(calendarEl, {
+                @* events: '~/js/eventTest.json'*@
+
+                events: '@Url.RouteUrl(new{ action="GetEvents", controller="Home"})',
+                weekNumbers: true,
+                weekText: '',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek'
+                },
+                firstDay: 1
+            });
+
+            calendar.render();
+           });
+        };
+    </script>
+</body>

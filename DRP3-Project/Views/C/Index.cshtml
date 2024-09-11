@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-3" style="text-align: center;">Check in/out</h1>
+    <hr />
+    <h1 class="display-4" id="time" style="text-align: center;">Here should the time be</h1>
+
+    <form asp-controller="C" method="post">
+        <button type="submit" class="btn btn-outline-dark text-white" style="        width: 150px;
+        margin: 70px 100px;
+        background-color:@ViewData["BtnColour"];" asp-action="Index">
+            @ViewData["CheckedStatus"]
+        </button>
+    </form>
+    <p class="display-4" style="font-size: 40px;" id="checkInTime"> @ViewData["CheckedInTime"] </p>
+    <p class="display-4" style="font-size: 40px;" id="checkOutTime">   </p>
+
+    <div style="position:absolute; bottom: 70px; text-align: center; width: 60%;">
+        <p class="display-4" style="font-size: 20px"> You are @ViewData["ProgressBarLoad"]% done with work for this week</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animat ed bg-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: @ViewData["ProgressBarLoad"]%"></div>
+        </div>
+    </div>
+
+    <script>
+        showTime();
+
+        function showTime() {
+            let today = new Date(),
+                hour = today.getHours(),
+                min = today.getMinutes();
+            //sec = today.getSeconds();
+
+            // Output Time
+            time.innerHTML = `${addZero(hour)}<span>:</span>${addZero(min)}`; //<span>:</span>${addZero(sec)}`;
+
+            setTimeout(showTime, 1000);
+        }
+
+        function addZero(n) {
+            return (parseInt(n, 10) < 10 ? '0' : '') + n;
+        }
+    </script>
+</div>

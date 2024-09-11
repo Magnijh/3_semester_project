@@ -1,0 +1,2276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="P3Database.dll" />
+			<Metadata Name="FileName" Value="C:\USERS\BENNO\ONEDRIVE - AALBORG UNIVERSITET\UNI\CODE\C#\P3\P3DATABASE\OBJ\DEBUG\P3DATABASE.DLL" />
+			<Metadata Name="AssemblyName" Value="P3Database" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\P3Database\obj\Debug\P3Database.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(0)]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VacationTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Approved]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NULL)]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VacationTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[VacationTable].[ApprovedBy]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((37))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[WorkHoursInWeek]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Role]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[VacationTable].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VacationTable]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[WorkTable].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[WorkTable]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[AbsentTable]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AbsentTable].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AbsentTable].[EmployeeId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AbsentTable].[Department_Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AbsentTable].[StartDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AbsentTable].[EndDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AbsentTable].[Note]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DepartmentTable]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DepartmentTable].[Department_Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DepartmentTable].[Department]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[EmployeeTable]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EmployeeTable].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EmployeeTable].[FirstName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EmployeeTable].[LastName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EmployeeTable].[EmployeeId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EmployeeTable].[EmpPass]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EmployeeTable].[Email]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EmployeeTable].[Department_Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EmployeeTable].[WorkHoursInWeek]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="5" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[EmployeeTable].[Role]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="6" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="8" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_AbsentTable_ToDepartmentTable]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[Department_Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[AbsentTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[DepartmentTable].[Department_Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[DepartmentTable]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="12" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_AbsentTable_ToUserTable]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[EmployeeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[AbsentTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="11" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_EmployeeTable_ToDepartmentTable]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Department_Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[DepartmentTable].[Department_Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[DepartmentTable]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="14" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_VacationTable_ToUserTable]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[VacationTable].[EmployeeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VacationTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_VacationTable1_ToDepartmentTable]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Department_Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[VacationTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[DepartmentTable].[Department_Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[DepartmentTable]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_WorkTable_ToDepartmentTable]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[WorkTable].[Department_Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[WorkTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[DepartmentTable].[Department_Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[DepartmentTable]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_WorkTable_ToUser]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[WorkTable].[EmployeeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[WorkTable]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_AbsentTable]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[AbsentTable].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[AbsentTable]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="10" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DepartmentTable]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DepartmentTable].[Department_Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DepartmentTable]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="13" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spAbsent]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    SET NOCOUNT ON; 
+
+DECLARE @EmpDEP INT = (SELECT Department_Id FROM dbo.EmployeeTable WHERE EmployeeId = @EmpId)
+
+
+INSERT INTO dbo.AbsentTable (EmployeeId, Department_Id, StartDate, EndDate, Note) VALUES (@EmpId, @EmpDEP, @StartDate, @EndDate, @Reason);
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAbsent].[@EmpId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[StartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[EndDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[Note]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAbsent].[@StartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAbsent].[@EndDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAbsent].[@Reason]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAbsent].[@EmpId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAbsent].[@StartDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAbsent].[@EndDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAbsent].[@Reason]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="403" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spAbsent]&#xD;&#xA;&#x9;@EmpId&#x9;&#x9;VARCHAR(50),&#xD;&#xA;&#x9;@StartDate&#x9;DATETIME,&#xD;&#xA;&#x9;@EndDate&#x9;DATETIME,&#xD;&#xA;&#x9;@Reason&#x9;&#x9;VARCHAR(200)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spCalender]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN  
+
+	SET NOCOUNT ON;
+
+	DECLARE @Color		VARCHAR(10);
+	DECLARE @Rendering	VARCHAR(10) = 'background';
+	
+IF (@Request = 'EmployeeWorkHours')
+BEGIN
+	SET @Color = 'green';
+
+	SELECT Id AS 'id', CheckInDate AS 'start', CheckOutDate AS 'end', @Rendering AS rendering, @Color AS color 
+	FROM WorkTable 
+	WHERE CheckOutDate IS NOT NULL
+	and EmployeeId = @EmpID;
+END
+
+IF (@Request = 'EmployeeAbsence')
+BEGIN
+	SET @Color = 'red';
+
+	SELECT Id AS 'id', StartDate AS 'start', EndDate AS 'end', @Rendering AS rendering, @Color AS color, Note
+	FROM dbo.AbsentTable 
+	WHERE EmployeeId = @EmpID;
+END
+
+IF (@Request = 'DepartmentVacation')
+BEGIN
+	SET @Color = 'grey';
+
+	DECLARE @Holder INT = (Select Department_Id from EmployeeTable where EmployeeId = @EmpID )
+
+	SELECT Id AS 'id', StartDate AS 'start', EndDate AS 'end', @Rendering AS rendering, @Color AS color 
+	FROM dbo.VacationTable 
+	WHERE Department_Id = @Holder
+	AND Approved = 1;
+END
+
+IF (@Request = 'EmployeeVacation')
+BEGIN
+	SET @Color = 'grey';
+	SELECT Id AS 'id', StartDate AS 'start', EndDate AS 'end', @Rendering AS rendering, @Color AS color 
+	FROM dbo.VacationTable 
+	WHERE EmployeeId = @EmpID
+	AND Approved = 1;
+END
+
+RETURN
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCalender].[@EmpID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCalender].[@Request]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[CheckInDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[CheckOutDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[StartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[EndDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[Note]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AbsentTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[StartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[EndDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Approved]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[EmployeeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCalender].[@EmpID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCalender].[@Request]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="2" />
+				<Property Name="Length" Value="1324" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;CREATE PROCEDURE [dbo].[spCalender]&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;@EmpID&#x9;&#x9;VARCHAR(50),&#xD;&#xA;&#x9;@Request&#x9;VARCHAR(50)&#xD;&#xA;&#x9;&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spCheckInOut]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+DECLARE @Holder INT = (
+		SELECT COUNT(EmployeeId) 
+		FROM dbo.WorkTable 
+		WHERE EmployeeId = @Username AND CheckOutDate IS NULL)
+
+DECLARE @DepartmentIDHolder INT = (
+		SELECT Department_Id 
+		FROM dbo.EmployeeTable 
+		WHERE EmployeeId = @Username)
+
+IF @Holder = 1
+	UPDATE dbo.WorkTable
+		SET 
+		CheckOutDate = DATEADD(hour, 1, GETUTCDATE()),
+		TimeWorked = DATEDIFF(SECOND, CheckInDate, DATEADD(hour, 1, GETUTCDATE()))
+		WHERE 1=1
+		AND EmployeeId = @Username
+		AND CheckOutDate IS NULL
+
+ELSE IF @Holder = 0
+	INSERT INTO dbo.WorkTable
+		(EmployeeId, Department_Id, CheckInDate)
+		VALUES 
+		(@Username, @DepartmentIDHolder, DATEADD(hour, 1, GETUTCDATE()))
+
+ELSE 
+	PRINT 'something went wrong, multiple CheckIn with no CheckOut'
+	-- someone should do some error handling.. ]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCheckInOut].[@Username]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[CheckOutDate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[CheckOutDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[TimeWorked]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[CheckInDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[Department_Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCheckInOut].[@Username]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="872" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spCheckInOut]&#xD;&#xA;&#xD;&#xA;@Username&#x9;varchar(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spCheckInStatus]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN  
+
+    SET NOCOUNT ON; 
+	
+	DECLARE @CheckedInStatus		INT	= (
+		SELECT COUNT(EmployeeId) FROM dbo.WorkTable WHERE EmployeeId = @USessionId AND CheckOutDate IS NULL
+		)
+	
+	DECLARE @LastCheckInDate		DATETIME = (
+		SELECT CheckInDate FROM dbo.WorkTable WHERE EmployeeId = @USessionId AND CheckOutDate IS NULL
+		)
+
+
+	DECLARE @WeekBegin DATETIME = DATEADD(wk, 0, DATEADD(DAY, 1-DATEPART(WEEKDAY, DATEADD(hour, 1, GETUTCDATE())), DATEDIFF(dd, 0, DATEADD(hour, 1, GETUTCDATE())))) --first day current week.. starts sunday tho..
+	
+	DECLARE @SecWorkedLastWeek		INT = (
+		SELECT SUM(TimeWorked) FROM dbo.WorkTable WHERE EmployeeId = @USessionId AND CheckOutDate IS NOT NULL 
+		AND CheckInDate BETWEEN @WeekBegin AND DATEADD(hour, 1, GETUTCDATE())
+		)
+
+	DECLARE @WorkHoursInWeek		INT = (
+		SELECT WorkHoursInWeek FROM dbo.EmployeeTable WHERE EmployeeId = @USessionId
+		)
+	
+	SELECT @CheckedInStatus AS CheckedInStatus, @LastCheckInDate AS CheckInDate, 
+			@SecWorkedLastWeek AS SecondsWorkedLastWeek, @WorkHoursInWeek AS TargetWorkHours
+
+
+	--SELECT COUNT(UserName), CAST(CheckInDate AS DATETIME) FROM dbo.CheckInOutTable WHERE UserName = @USessionId AND CheckOutDate IS NULL
+	--SELECT COUNT(UserName) AS CheckedInStatus FROM dbo.CheckInOutTable WHERE UserName = @USessionId AND CheckOutDate IS NULL
+	--SELECT CheckInDate FROM dbo.CheckInOutTable WHERE UserName = @USessionId AND CheckOutDate IS NULL
+	--SELECT SUM(TimeWorked) AS SecondsWorked FROM dbo.CheckInOutTable WHERE UserName = @USessionId AND CheckOutDate IS NOT NULL
+RETURN
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCheckInStatus].[@USessionId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[CheckOutDate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[CheckInDate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[TimeWorked]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[WorkHoursInWeek]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCheckInStatus].[@USessionId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1638" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spCheckInStatus]&#xD;&#xA;&#xD;&#xA;&#x9;@USessionId VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetEmployeesBy]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+IF (@DepId != 0)
+BEGIN
+
+SELECT FirstName as 'Firstname', LastName as 'Lastname', A.EmployeeId as 'EmployeeId', 
+	Role, Email, Department, WorkHoursInWeek
+FROM EmployeeTable AS A 
+left join DepartmentTable AS B
+ON A.Department_Id = B.Department_Id
+WHERE A.Department_Id = @DepId
+END
+
+ELSE
+BEGIN
+SELECT FirstName as 'Firstname', LastName as 'Lastname', A.EmployeeId as 'EmployeeId', 
+	Role, Email, Department, WorkHoursInWeek
+FROM EmployeeTable AS A 
+left join DepartmentTable AS B
+ON A.Department_Id = B.Department_Id
+WHERE A.EmployeeId = @EmpId
+
+END
+RETURN]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[spGetEmployeesBy].[@DepId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DepartmentTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DepartmentTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Role]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DepartmentTable].[Department]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[WorkHoursInWeek]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetEmployeesBy].[@EmpId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetEmployeesBy].[@DepId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetEmployeesBy].[@EmpId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="664" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetEmployeesBy]&#xD;&#xA;&#xD;&#xA;@DepId INT, &#xD;&#xA;@EmpId VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGraphDataDepartment]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+DECLARE @EmpDepId INT = (SELECT Department_Id FROM EmployeeTable WHERE EmployeeId = @EmpId)
+
+DECLARE @EmpsInDep INT = (SELECT COUNT(Id) FROM dbo.EmployeeTable WHERE Department_Id = 3)
+
+SELECT  MonthNumber = DATEPART("mm", DATEADD(MONTH, DATEDIFF(MONTH, 0, CheckOutDate), 0)), 
+        SUM(TimeWorked)/@EmpsInDep as AvgSecondsWorked
+FROM    WorkTable
+WHERE   CheckOutDate >= (DATEADD(hour, 1, GETUTCDATE()) - 365)
+AND     CheckOutDate <= (DATEADD(hour, 1, GETUTCDATE()) + 365)
+AND     CheckOutDate IS NOT NULL
+AND		Department_Id = @EmpDepId
+GROUP BY DATEADD(MONTH, DATEDIFF(MONTH, 0, CheckOutDate), 0)
+
+RETURN]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGraphDataDepartment].[@EmpId]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[CheckOutDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[TimeWorked]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[Department_Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGraphDataDepartment].[@EmpId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="696" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGraphDataDepartment]&#xD;&#xA;&#x9;@EmpId VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGraphDataPersonal]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+
+DECLARE @EmpsInDep INT = (SELECT COUNT(Id) FROM dbo.EmployeeTable WHERE Department_Id = 3)
+
+SELECT  MonthNumber = DATEPART("mm", DATEADD(MONTH, DATEDIFF(MONTH, 0, CheckOutDate), 0)), 
+        SUM(TimeWorked) as AvgSecondsWorked 
+FROM    WorkTable
+WHERE   CheckOutDate >= (DATEADD(hour, 1, GETUTCDATE()) - 365)
+AND     CheckOutDate <= (DATEADD(hour, 1, GETUTCDATE()) + 365)
+AND     CheckOutDate IS NOT NULL
+AND		EmployeeId = @EmpId
+GROUP BY DATEADD(MONTH, DATEDIFF(MONTH, 0, CheckOutDate), 0)
+
+RETURN]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[CheckOutDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[TimeWorked]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGraphDataPersonal].[@EmpId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGraphDataPersonal].[@EmpId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="585" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGraphDataPersonal]&#xD;&#xA;&#x9;@EmpId VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spLogin]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+SET NOCOUNT ON
+
+BEGIN	
+
+SELECT EmpPass AS 'AccountHash', Department_Id AS 'AccountDepartment', Role AS 'AccountRole'
+FROM dbo.EmployeeTable 
+WHERE EmployeeId = @EmpID
+	
+END
+RETURN]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmpPass]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Role]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spLogin].[@EmpID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spLogin].[@EmpID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="255" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spLogin]&#xD;&#xA;(&#xD;&#xA;@EmpID&#x9;&#x9;VARCHAR(50)&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spRequestVacation]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+    SET NOCOUNT ON; 
+
+DECLARE @EmpDEP INT = (SELECT Department_Id FROM dbo.EmployeeTable WHERE EmployeeId = @EmpId);
+
+
+INSERT INTO dbo.VacationTable (EmployeeId, Department_Id, StartDate, EndDate, ReqCreateDate) VALUES (@EmpId, @EmpDEP, @StartDate, @EndDate, DATEADD(hour, 1, GETUTCDATE()));]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spRequestVacation].[@EmpId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[StartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[EndDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[ReqCreateDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spRequestVacation].[@StartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spRequestVacation].[@EndDate]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spRequestVacation].[@EmpId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spRequestVacation].[@StartDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spRequestVacation].[@EndDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="2" />
+				<Property Name="Length" Value="412" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;CREATE PROCEDURE [dbo].[spRequestVacation]&#xD;&#xA;&#x9;@EmpId&#x9;&#x9;VARCHAR(50),&#xD;&#xA;&#x9;@StartDate&#x9;DATETIME,&#xD;&#xA;&#x9;@EndDate&#x9;DATETIME&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spStatisticsByDepOrEmpId]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+    SET NOCOUNT ON; 
+BEGIN
+
+DECLARE @WeekBegin DATETIME = DATEADD(wk, 0, DATEADD(DAY, 1-DATEPART(WEEKDAY, DATEADD(hour, 1, GETUTCDATE())), DATEDIFF(dd, 0, DATEADD(hour, 1, GETUTCDATE())))) --first day current week.. starts sunday tho..
+
+
+IF(@EmpId = '')
+BEGIN
+SELECT EmployeeId, FirstName, LastName, Role, WorkHoursInWeek,
+
+(SELECT AVG(TimeWorked) 
+	FROM dbo.WorkTable
+	WHERE TimeWorked IS NOT NULL	
+	AND EmployeeId = A.EmployeeId)
+	AS AverageSecondsPerCheckIn,
+
+(SELECT SUM(TimeWorked)
+	FROM dbo.WorkTable 
+	WHERE EmployeeId = A.EmployeeId 
+	AND CheckInDate BETWEEN @WeekBegin AND DATEADD(hour, 1, GETUTCDATE())) 
+	AS SecondsWorkedThisWeek
+
+FROM EmployeeTable as A
+WHERE A.Department_Id = @DepId
+END
+
+ELSE
+BEGIN
+SELECT EmployeeId, FirstName, LastName, Role, WorkHoursInWeek,
+
+(SELECT AVG(TimeWorked) 
+	FROM dbo.WorkTable
+	WHERE TimeWorked IS NOT NULL	
+	AND EmployeeId = A.EmployeeId)
+	AS AverageSecondsPerCheckIn,
+
+(SELECT SUM(TimeWorked)
+	FROM dbo.WorkTable 
+	WHERE EmployeeId = A.EmployeeId 
+	AND CheckInDate BETWEEN @WeekBegin AND DATEADD(hour, 1, GETUTCDATE())) 
+	AS SecondsWorkedThisWeek
+
+FROM EmployeeTable as A
+WHERE A.EmployeeId = @EmpId
+END
+
+END
+
+	--select EmployeeId, Department from EmployeeTable as A left join DepartmentTable as B on A.Department_Id = B.Department_Id]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spStatisticsByDepOrEmpId].[@EmpId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Role]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[WorkHoursInWeek]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[TimeWorked]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[WorkTable].[CheckInDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spStatisticsByDepOrEmpId].[@DepId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spStatisticsByDepOrEmpId].[@DepId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spStatisticsByDepOrEmpId].[@EmpId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1419" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spStatisticsByDepOrEmpId]&#xD;&#xA;&#x9;@DepId&#x9;INT,&#xD;&#xA;&#x9;@EmpId VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spVacationCurrentRequests]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+IF (@EmpId = '')
+BEGIN
+SELECT A.Id as 'Id', A.EmployeeId as 'EmployeeId', FirstName as 'Firstname', LastName as 'Lastname', 
+	StartDate, EndDate, ReqCreateDate, Approved as 'Status', ApprovedBy as ChangedBy
+FROM VacationTable AS A 
+left join EmployeeTable AS B
+ON A.EmployeeId = B.EmployeeId
+WHERE A.Department_Id = @DepId
+AND ReqCreateDate >= (DATEADD(hour, 1, GETUTCDATE()) - 100)
+ORDER BY ReqCreateDate ASC
+END
+
+ELSE
+BEGIN
+SELECT A.Id as 'Id', A.EmployeeId as 'EmployeeId', FirstName as 'Firstname', LastName as 'Lastname', 
+	StartDate, EndDate, ReqCreateDate, Approved as 'Status', ApprovedBy as ChangedBy
+FROM VacationTable AS A 
+left join EmployeeTable AS B
+ON A.EmployeeId = B.EmployeeId
+WHERE A.EmployeeId = @EmpId
+AND Approved = 1
+ORDER BY ReqCreateDate ASC
+END
+RETURN]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[spVacationCurrentRequests].[@EmpId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[EmployeeTable].[LastName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[StartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[EndDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[ReqCreateDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Approved]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[ApprovedBy]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spVacationCurrentRequests].[@DepId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Approved]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spVacationCurrentRequests].[@EmpId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spVacationCurrentRequests].[@DepId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="896" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spVacationCurrentRequests]&#xD;&#xA;&#xD;&#xA;@EmpId VARCHAR(50),&#xD;&#xA;@DepId INT &#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spVacationRequestsGroupedByWeek]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+SELECT
+  DATEPART(week, StartDate) AS 'WeekNum',
+  COUNT(EmployeeId) AS 'WeeklyRequests'
+FROM VacationTable
+WHERE Approved = 0
+	AND Department_Id = @DepId
+GROUP BY DATEPART(week, StartDate)
+ORDER BY DATEPART(week, StartDate)
+
+RETURN]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[VacationTable]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[StartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[EmployeeId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Approved]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VacationTable].[Department_Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spVacationRequestsGroupedByWeek].[@DepId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spVacationRequestsGroupedByWeek].[@DepId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="321" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spVacationRequestsGroupedByWeek]&#xD;&#xA;&#x9;&#xD;&#xA;@DepId INT &#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[VacationTable]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[VacationTable].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[VacationTable].[EmployeeId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[VacationTable].[Department_Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[VacationTable].[StartDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[VacationTable].[EndDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[VacationTable].[ReqCreateDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[VacationTable].[Approved]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[VacationTable].[ApprovedBy]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="4" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="7" />
+			<AttachedAnnotation Disambiguator="15" />
+			<AttachedAnnotation Disambiguator="16" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[WorkTable]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[WorkTable].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="9" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[WorkTable].[EmployeeId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[WorkTable].[Department_Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[WorkTable].[CheckInDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[WorkTable].[CheckOutDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[WorkTable].[TimeWorked]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="18" />
+			<AttachedAnnotation Disambiguator="17" />
+		</Element>
+	</Model>
+</DataSchemaModel>

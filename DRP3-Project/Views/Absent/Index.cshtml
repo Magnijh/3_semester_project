@@ -1,0 +1,121 @@
+﻿@model DRP3_Project.Models.AbsentModel
+@{
+    ViewData["Title"] = "Absent";
+}
+
+<head>
+    <link href="~/lib/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <script src="~/lib/jquery-ui/jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4">Reason for absence</h1>
+
+        <hr />
+        <form asp-action="RequestAbsence" autocomplete="off" method="post">
+            <div style="width: 55%; height: 40%; margin: auto; padding: 50px 0px;">
+                <div style="text-align: left; float: right;">
+                    <p class="display-4" style="font-size: 20px">Absent for a day</p>
+                    <div class="custom-control custom-radio" style="padding: 5px 0px;">
+                        <input asp-for="Reason" type="radio" id="customRadio1.1" name="Reason" class="custom-control-input" value="Sickness" required oninvalid="alert('You forgot to check a reason');">
+                        <label asp-for="Reason" class="custom-control-label green" for="customRadio1.1">Sick</label>
+                    </div>
+                    <div class="custom-control custom-radio" style="padding: 5px 0px;">
+                        <input asp-for="Reason" type="radio" id="customRadio1.2" name="Reason" class="custom-control-input" value="Sickness of child">
+                        <label asp-for="Reason" class="custom-control-label green" for="customRadio1.2">Sick child</label>
+                    </div>
+                    <div class="custom-control custom-radio" style="padding: 5px 0px;">
+                        <input asp-for="Reason" type="radio" id="customRadio1.3" name="Reason" class="custom-control-input" value="Absent for a day">
+                        <label asp-for="Reason" class="custom-control-label green" for="customRadio1.3"><input type="text" id="otherReason0" name="OtherReason" class="form-control" placeholder="Other" aria-label="Other" aria-describedby="button-addon2"></label>
+                    </div>
+                </div>
+
+                <div style="text-align: left; float: left;">
+                    <p class="display-4" style="font-size: 20px">Absent for short appointment</p>
+                    <div class="custom-control custom-radio" style="padding: 5px 0px;">
+                        <input asp-for="Reason" type="radio" id="customRadio2.1" name="Reason" class="custom-control-input" value="Doctors appointment">
+                        <label asp-for="Reason" class="custom-control-label green" for="customRadio2.1">Doctor</label>
+                    </div>
+                    <div class="custom-control custom-radio" style="padding: 5px 0px;">
+                        <input asp-for="Reason" type="radio" id="customRadio2.2" name="Reason" class="custom-control-input" value="Dentist appointment">
+                        <label asp-for="Reason" class="custom-control-label green" for="customRadio2.2">Dentist</label>
+                    </div>
+                    <div class="custom-control custom-radio" style="padding: 5px 0px;">
+                        <input asp-for="Reason" type="radio" id="customRadio2.3" name="Reason" class="custom-control-input" value="Absent for a short time">
+                        <label class="custom-control-label green" for="customRadio2.3"><input type="text" id="otherReason1" name="OtherReason" class="form-control" placeholder="Other" aria-label="Other" aria-describedby="button-addon2"></label>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 60%; text-align: right;">
+                <button type="submit" onclick="Update()" name="submitRequest" value="Submit" class="btn btn-outline-dark text-white" style="background-color: #008A46;">Submit</button>
+            </div>
+        </form>
+
+        <hr style="position: relative; top: 25px;" />
+        <form asp-action="RequestAbsence" autocomplete="off" method="post">
+            <div style="width: 55%; height: 40%; margin: auto; padding: 50px 0px 0px 0px;">
+
+                <div style="position: relative; top: 50px; text-align: left;">
+
+                    <div style="text-align: left; float: left;">
+                        <p class="display-4" style="font-size: 20px;">Absent for a longer period</p>
+                        <div class="custom-control custom-radio" style="padding: 5px 0px; width: 100%;">
+                            <input asp-for="Reason" type="radio" id="customRadio3.1" name="Reason" class="custom-control-input" value="Work related accident" required oninvalid="alert('You forgot to check a reason');">
+                            <label asp-for="Reason" class="custom-control-label green" for="customRadio3.1">Work related accident</label>
+                        </div>
+                        <div class="custom-control custom-radio" style="padding: 5px 0px;">
+                            <input asp-for="Reason" type="radio" id="customRadio3.2" name="Reason" class="custom-control-input" value="Maternity leave">
+                            <label asp-for="Reason" class="custom-control-label green" for="customRadio3.2">Maternity leave</label>
+                        </div>
+                        <div class="custom-control custom-radio" style="padding: 5px 0px;">
+                            <input asp-for="Reason" type="radio" id="customRadio3.3" name="Reason" class="custom-control-input" value="Leave of absence">
+                            <label asp-for="Reason" class="custom-control-label green" for="customRadio3.3">Leave of absence</label>
+                        </div>
+                        <div class="custom-control custom-radio" style="padding: 5px 0px;">
+                            <input asp-for="Reason" type="radio" id="customRadio3.4" name="Reason" class="custom-control-input" value="Time off">
+                            <label asp-for="Reason" class="custom-control-label green" for="customRadio3.4">Time off</label>
+                        </div>
+                        <div class="custom-control custom-radio" style="padding: 5px 0px;">
+                            <input asp-for="Reason" type="radio" id="customRadio3.5" name="Reason" class="custom-control-input" value="long term absence">
+                            <label asp-for="Reason" class="custom-control-label green" for="customRadio3.5"><input type="text" id="otherReason2" name="OtherReason" class="form-control" placeholder="Other" aria-label="Other" aria-describedby="button-addon2"></label>
+                        </div>
+                    </div>
+
+                    <div style="text-align: left; float: right;">
+                        <p class="display-4" style="font-size: 20px;">Pick a date</p>
+                        <p> From: </p>
+                        <input asp-for="StartDate" type="text" class="form-control" placeholder="DD/MM/YY" aria-label="Other" aria-describedby="button-addon2" id="datepicker0" name="StartDate" required>
+                        <p> To: </p>
+                        <input asp-for="EndDate" type="text" class="form-control" placeholder="DD/MM/YY" aria-label="Other" aria-describedby="button-addon2" id="datepicker1" name="EndDate" required>
+                    </div>
+
+                </div>
+            </div>
+            <div style="margin-left: 60%; text-align: right; top: 125px;">
+                <button type="submit" onclick="Update()" name="submitRequest" value="Submit" class="btn btn-outline-dark text-white" style="background-color: #008A46;">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $("#datepicker0").datepicker({
+            inline: true,
+            dateFormat: "dd-mm-yy"
+        });
+        $("#datepicker1").datepicker({
+            inline: true,
+            dateFormat: "dd-mm-yy"
+        });
+    </script>
+
+    <script type="text/javascript"> 
+        function Update()
+        {
+            document.getElementById("customRadio1.3").value = document.getElementById("otherReason0").value;
+            document.getElementById("customRadio2.3").value = document.getElementById("otherReason1").value;
+            document.getElementById("customRadio3.6").value = document.getElementById("otherReason2").value;
+        }
+    </script>
+</body>

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<DRP3_Project.Models.AdminPageModel_LoadIn>
+@using DRP3_Project.enums
+
+@{ ViewData["Title"] = "Users"; }
+
+<h1>Employee manager</h1>
+
+<br />
+<form style="display: inline" class="float-left" asp-action="Add" method="get">
+    <button class="btn-outline-info">Add new employee</button>
+</form>
+
+<form style="display: inline" class="float-right" asp-controller="AdminPageDepartment" asp-action="AddDepartment" method="get">
+    <button class="btn-outline-info">Register new department</button>
+</form>
+
+<br />
+<br />
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Firstname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lastname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkHoursInWeek)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeId)
+            </td>
+            <td>
+                @Enum.GetName(typeof(Role), item.Role)
+                @*@Html.DisplayFor(modelItem => item.Role)*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkHoursInWeek)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { EmployeeId = item.EmployeeId }) |
+                @Html.ActionLink("Details", "Details", new { EmployeeId = item.EmployeeId }) |
+                @Html.ActionLink("Delete", "Delete", new { EmployeeId = item.EmployeeId })
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,158 @@
+﻿@model DataHub.Models.DataHub_PersonalStatistics.DataHub_PersonalStatisticsModel
+@{
+    ViewData["Title"] = "Personal statistics";
+}
+<head>
+
+</head>
+
+
+<body>
+    <div style="text-align: center;">
+        <p class="display-4"> Personal statistics for @(Model.PersonalStatistics[0].FirstName) @(Model.PersonalStatistics[0].LastName) </p>
+
+
+        <div>
+            <p class="display-4" style="font-size: 25px"> Personal Information </p>
+            <table class="table table-striped" id="dataTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Target hours <br /> per/week</th>
+                        @*<th scope="col">Absence %</th>*@
+                        <th scope="col">Average hours <br /> per/check in</th>
+                        <th scope="col">Hours worked <br /> this week</th>
+                        @*<th scope="col">Vacation left</th>
+                        <th scope="col">vacation used</th>*@
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.PersonalStatistics)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmployeeId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+                            <td>
+                                @Enum.GetName(typeof(Role), item.Role)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.WorkHoursInWeek)
+                            </td>
+                            <td>
+                                <a>@TimeSpan.FromSeconds(item.AverageSecondsPerCheckIn)</a>
+                                @*@Html.DisplayFor(modelItem => item.AverageSecondsPerCheckIn)*@
+                            </td>
+                            <td>
+                                <a>@TimeSpan.FromSeconds(item.SecondsWorkedThisWeek)</a>
+                                @*@Html.DisplayFor(modelItem => (item.SecondsWorkedThisWeek/3600))*@
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <hr />
+
+
+        @*History of Absence*@
+        <div>
+            <p class="display-4" style="font-size: 25px"> History of Absence </p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Length of Absence</th>
+                        <th scope="col">Reason for Absence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.AbsenceData)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmployeeID)
+                            </td>
+                            <td>
+                                @{
+
+                                    if (item.StartDate != item.EndDate)
+                                    {
+                                        <a>From @item.StartDate.ToShortDateString()</a>
+                                        <br />
+                                        <a>To @item.EndDate.ToShortDateString()</a>
+                                    }
+                                    else
+                                    {
+                                        <a>@item.StartDate.ToShortDateString()</a>
+                                    }
+
+                                }
+                            </td>
+                            <td>
+                                <a>@((item.EndDate-item.StartDate).Days +1) days</a>
+                            </td>
+                            <td>
+                                <a>@item.Reason</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <hr />
+        @*Accepted Vacation*@
+        <div>
+            <p class="display-4" style="font-size: 25px"> Vacation History </p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Length of vacation</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.PersonalAcceptedVacation)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmployeeId)
+                            </td>
+                            <td>
+                                <a>From @item.StartDate.ToShortDateString()</a>
+                                <br />
+                                <a>To @item.EndDate.ToShortDateString()</a>
+                            </td>
+                            <td>
+                                <a>@((item.EndDate-item.StartDate).Days +1) days</a>
+                            </td>
+                            <td>
+                                @if (item.Status == 1)
+                                {
+                                    <a>Accepted</a>
+                                }
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+
+<script>
+
+    
+</script>

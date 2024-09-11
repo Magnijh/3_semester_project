@@ -1,0 +1,51 @@
+﻿@model DRP3_Project.Models.LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <a class="navbar-brand d-none d-lg-block" style="position: center; margin-top: 5%;">
+        <img src="~/Images/migatronic_logo_green_SVG.svg" width="400" alt="">
+    </a>
+
+    <div class="row align-items-center justify-content-center" style="text-align: center; margin-top: 2%;">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmployeeId" class="control-label"> Username</label>
+                <input asp-for="EmployeeId" autocomplete="off" class="form-control" />
+                <span asp-validation-for="EmployeeId" class="text-danger">@ViewBag.LoginErrorMsgUsername</span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"> Password</label>
+                <input asp-for="Password" autocomplete="off" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger">@ViewBag.LoginErrorMsg</span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-outline-dark text-white" style="background-color: #008A46;" />
+            </div>
+        </form>
+
+    </div>
+
+    <div class="d-none d-xl-block" id="bgContainer">
+        <div class="bgLeft float-left">
+            <img src="~/Images/icon_welding-functions_v2.svg" width="450" height="450" alt="">
+        </div>
+        <div class="bgRight float-right">
+            <img src="~/Images/icon_welding-machine_v2.svg" width="450" height="450" alt="">
+        </div>
+    </div>
+
+</body>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+
+<footer> </footer>

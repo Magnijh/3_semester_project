@@ -1,0 +1,74 @@
+﻿@model IEnumerable<DataHub.Models.DataHub_DepartmentStatisticsModel>
+@{
+    ViewData["Title"] = "Statistics";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Statistics</h1>
+    <hr />
+    <div style="width: 100%;">
+        @*<div class="input-group mb-3" style="width: auto; float: left;">
+            <input type="text" class="form-control" placeholder="Employee name or ID" aria-label="Employee name or ID" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+            </div>
+        </div>
+        <div class="dropdown" style="float: left; padding: 0px 10px;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" style="background-color: #008A46;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Department
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown1">
+                <a class="dropdown-item" href="#">Sale</a>
+                <a class="dropdown-item" href="#">R&D</a>
+                <a class="dropdown-item" href="#">Economics</a>
+            </div>
+        </div>*@
+        <div>
+            <form>
+                <a type="button" class="btn btn-dark" style="float: left; background-color: #1d6f42;" id="Export" asp-action="Excel">Export to Excel</a>
+            </form>
+        </div>
+    </div>
+    <table class="table table-striped" id="dataTable">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Target hours <br /> per/week</th>
+                @*<th scope="col">Absence %</th>*@
+                <th scope="col">Average hours <br /> per/check in</th>
+                <th scope="col">Hours worked <br /> this week</th>
+                @*<th scope="col">Vacation left</th>
+                    <th scope="col">vacation used</th>*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeeId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Enum.GetName(typeof(Role), item.Role)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WorkHoursInWeek)
+                    </td>
+                    <td>
+                        <a>@TimeSpan.FromSeconds(item.AverageSecondsPerCheckIn)</a>
+                        @*@Html.DisplayFor(modelItem => item.AverageSecondsPerCheckIn)*@
+                    </td>
+                    <td>
+                        <a>@TimeSpan.FromSeconds(item.SecondsWorkedThisWeek)</a>
+                        @*@Html.DisplayFor(modelItem => (item.SecondsWorkedThisWeek/3600))*@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,54 @@
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\test-4\DataHub\bin\Debug\netcoreapp3.1\DataHub.deps.json
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\test-4\DataHub\bin\Debug\netcoreapp3.1\DataHub.dll
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\test-4\DataHub\obj\Debug\netcoreapp3.1\DataHub.csprojAssemblyReference.cache
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\test-4\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfoInputs.cache
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\test-4\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfo.cs
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\test-4\DataHub\obj\Debug\netcoreapp3.1\DataHub.csproj.CoreCompileInputs.cache
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\test-4\DataHub\bin\Debug\netcoreapp3.1\DataHub.pdb
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\test-4\DataHub\obj\Debug\netcoreapp3.1\DataHub.dll
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\test-4\DataHub\obj\Debug\netcoreapp3.1\DataHub.pdb
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.deps.json
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.dll
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.pdb
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.csprojAssemblyReference.cache
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfoInputs.cache
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfo.cs
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.dll
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.pdb
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.csproj.CoreCompileInputs.cache
+C:\Users\nikog\Documents\AAU\3. semester\OOP\Lecture 1\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.deps.json
+C:\Users\nikog\Documents\AAU\3. semester\OOP\Lecture 1\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.dll
+C:\Users\nikog\Documents\AAU\3. semester\OOP\Lecture 1\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.pdb
+C:\Users\nikog\Documents\AAU\3. semester\OOP\Lecture 1\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.csprojAssemblyReference.cache
+C:\Users\nikog\Documents\AAU\3. semester\OOP\Lecture 1\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfoInputs.cache
+C:\Users\nikog\Documents\AAU\3. semester\OOP\Lecture 1\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfo.cs
+C:\Users\nikog\Documents\AAU\3. semester\OOP\Lecture 1\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.csproj.CoreCompileInputs.cache
+C:\Users\nikog\Documents\AAU\3. semester\OOP\Lecture 1\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.dll
+C:\Users\nikog\Documents\AAU\3. semester\OOP\Lecture 1\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.pdb
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DataHub\bin\Debug\netcoreapp3.1\DataHub.deps.json
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DataHub\bin\Debug\netcoreapp3.1\DataHub.dll
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DataHub\bin\Debug\netcoreapp3.1\DataHub.pdb
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfoInputs.cache
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfo.cs
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DataHub\obj\Debug\netcoreapp3.1\DataHub.dll
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DataHub\obj\Debug\netcoreapp3.1\DataHub.pdb
+E:\Projects\TimeManagementSystemApp\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.deps.json
+E:\Projects\TimeManagementSystemApp\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.dll
+E:\Projects\TimeManagementSystemApp\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.pdb
+E:\Projects\TimeManagementSystemApp\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.csprojAssemblyReference.cache
+E:\Projects\TimeManagementSystemApp\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfoInputs.cache
+E:\Projects\TimeManagementSystemApp\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfo.cs
+E:\Projects\TimeManagementSystemApp\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.csproj.CoreCompileInputs.cache
+E:\Projects\TimeManagementSystemApp\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.dll
+E:\Projects\TimeManagementSystemApp\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.pdb
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DataHub\obj\Debug\netcoreapp3.1\DataHub.csproj.CoreCompileInputs.cache
+C:\Users\pc\Documents\GitHub\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.deps.json
+C:\Users\pc\Documents\GitHub\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.dll
+C:\Users\pc\Documents\GitHub\DRP3-Project\DataHub\bin\Debug\netcoreapp3.1\DataHub.pdb
+C:\Users\pc\Documents\GitHub\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.csprojAssemblyReference.cache
+C:\Users\pc\Documents\GitHub\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfoInputs.cache
+C:\Users\pc\Documents\GitHub\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.AssemblyInfo.cs
+C:\Users\pc\Documents\GitHub\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.csproj.CoreCompileInputs.cache
+C:\Users\pc\Documents\GitHub\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.dll
+C:\Users\pc\Documents\GitHub\DRP3-Project\DataHub\obj\Debug\netcoreapp3.1\DataHub.pdb
+C:\Users\Benno\OneDrive - Aalborg Universitet\Uni\Code\C#\P3\DataHub\obj\Debug\netcoreapp3.1\DataHub.csprojAssemblyReference.cache

@@ -1,0 +1,40 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[AbsentTable] (Table)
+       [dbo].[DepartmentTable] (Table)
+       [dbo].[EmployeeTable] (Table)
+       [dbo].[VacationTable] (Table)
+       [dbo].[WorkTable] (Table)
+       Default Constraint: unnamed constraint on [dbo].[EmployeeTable] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[EmployeeTable] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[VacationTable] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[VacationTable] (Default Constraint)
+       [dbo].[FK_AbsentTable_ToUserTable] (Foreign Key)
+       [dbo].[FK_AbsentTable_ToDepartmentTable] (Foreign Key)
+       [dbo].[FK_EmployeeTable_ToDepartmentTable] (Foreign Key)
+       [dbo].[FK_VacationTable_ToUserTable] (Foreign Key)
+       [dbo].[FK_VacationTable1_ToDepartmentTable] (Foreign Key)
+       [dbo].[FK_WorkTable_ToUser] (Foreign Key)
+       [dbo].[FK_WorkTable_ToDepartmentTable] (Foreign Key)
+       [dbo].[spAbsent] (Procedure)
+       [dbo].[spCalender] (Procedure)
+       [dbo].[spCheckInOut] (Procedure)
+       [dbo].[spCheckInStatus] (Procedure)
+       [dbo].[spGetEmployeesBy] (Procedure)
+       [dbo].[spLogin] (Procedure)
+       [dbo].[spRequestVacation] (Procedure)
+       [dbo].[spStatistics] (Procedure)
+       [dbo].[spVacationCurrentRequests] (Procedure)
+       [dbo].[spVacationRequestsGroupedByWeek] (Procedure)
+
+** Supporting actions

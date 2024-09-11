@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DRP3_Project.Models.LoadCheckInOutModel>
+
+@{
+    ViewData["Title"] = "Check In Out List";
+}
+
+<h1>Title</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckInDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckOutDate)
+            </th>
+            <th>
+                Hours worked
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CheckInDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CheckOutDate)
+            </td>
+            <td>
+                @TimeSpan.FromSeconds(item.TimeWorked) 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

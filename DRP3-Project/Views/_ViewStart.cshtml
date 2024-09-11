@@ -1,0 +1,22 @@
+﻿@{
+
+    int UserRole = 0;
+
+    if (Context.Session.GetInt32("UserRole") is null)
+    {
+        Layout = "_Layout";
+    }
+    else
+    {
+        UserRole = (int)Context.Session.GetInt32("UserRole");
+    }
+
+    if (UserRole > 0)
+    {
+        Layout = "_AdminLayout";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+} 

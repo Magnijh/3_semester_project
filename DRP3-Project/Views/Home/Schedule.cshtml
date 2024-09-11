@@ -1,0 +1,89 @@
+﻿@model FullcalendarMvcApp.EventViewModel
+@{
+    ViewData["Title"] = "Schedule";
+}
+<head>
+    <style type="text/css">
+        .fc-event-title {
+            white-space: normal;
+        }
+        .field-validation-error {
+            color: #ff0000;
+        }
+    </style>
+    <!-- JS includes -->
+    <script src="~/lib/fullcalendar/main.js"></script>
+    <link rel="stylesheet" href="~/lib/fullcalendar/main.css" />
+    <link href="~/lib/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <script src="~/lib/jquery-ui/jquery-ui.js"></script>
+</head>
+
+<div>
+    <div>
+        @if (Context.Session.GetInt32("UserRole") > 0)
+        {
+            @Html.ActionLink("View requests", "VacationRequestOverview", "Vacation", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-dark text-white", @role = "button", @style = "background-color: #008A46" })
+
+        }
+
+        @*      @Html.ActionLink("Requests vacation", "RequestVacation", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-dark text-white", @role = "button", @style = "background-color: #008A46; margin: 10px 0px;" })
+        *@      <a href="#" class="btn text-white" style="background-color: #008A46; margin: 10px 0px;" data-toggle="modal" data-target="#requestModal">Requests vacation</a>
+
+        <div class="modal fade" id="requestModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Request vacation</h3>
+                        <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-action="RequestVacation" autocomplete="off" method="post">
+                            <label class="display-4" style="font-size: 20px;"> From:</label>
+                            <input type="text" class="form-control" id="datepicker0" name="txtStartDate" value="" />
+
+                            <label class="display-4" style="font-size: 20px;"> To:</label>
+                            <input type="text" class="form-control" id="datepicker1" name="txtEndDate" value="" />
+
+                            <hr />
+                            <a href="#" class="btn btn-dark" data-dismiss="modal">Cancel</a>
+                            <input type="submit" class="btn btn-success" name="submitRequest" value="Submit request" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='calendar'>
+    </div>
+</div>
+
+<script>
+    $("#datepicker0").datepicker({
+                        inline: true,
+        dateFormat: "dd-mm-yy"
+    });
+    $("#datepicker1").datepicker({
+                        inline: true,
+        dateFormat: "dd-mm-yy"
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var calendarEl = document.getElementById('calendar');
+        calendar = new FullCalendar.Calendar(calendarEl, {
+        events: '@Url.RouteUrl(new{ action= "GetWorkHourCalendar", controller="Home"})',
+        weekNumbers: true,
+        weekText: '',
+        displayEventTime: false,
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek'
+        },
+        firstDay: 1
+    });
+
+    calendar.render();
+    });
+</script>
